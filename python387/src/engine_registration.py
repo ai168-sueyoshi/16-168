@@ -1,5 +1,3 @@
-import sys
-
 # USIエンジン登録の関数
 # inputStr :将棋所から受け取るデータ 
 def usiEngineRegistration():
