@@ -39,6 +39,23 @@ def make_turn_of_iroha(lst_):
   
   return iroha_turn
 
+def make_moves(lst_):
+  """手数を返す関数
+
+  Args:
+    lst_: 「position」か「sfen」で始まるコマンドを分割した配列
+  
+  Returns:
+    int: 手数
+
+  """
+  if len(lst_) == 2:
+    moves = 1  # 手数
+  else:
+    moves = len(lst_) - 2
+  
+  return moves
+
 # 指し手生成する関数
 # 戻り値：
 # 指し手の配列

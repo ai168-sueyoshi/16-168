@@ -16,6 +16,9 @@ def create_thinking_main(lst_, str_):
   # 受け取ったコマンドを解析して格納する配列
   parsed_lst = pre_think.new_cmd_analysis_lst(str_)
   
+  # 手数の表示
+  print("手数: " + str(pre_think.make_moves(parsed_lst)) )
+
   # いろはが先手か後手かを格納する変数
   iroha_turn = pre_think.make_turn_of_iroha(parsed_lst)
   print("いろはの手番: " + iroha_turn)
