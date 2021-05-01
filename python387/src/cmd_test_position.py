@@ -1,8 +1,8 @@
-# テスト局面をセットする関数ファイル
+# テスト局面をUSIプロトコルのコマンドで返す関数ファイル
 
 # テスト局面（いろは先手）をセットする関数
 # 戻り値：
-# テスト局面（いろは先手）をセットする文字列
+# テスト局面（いろは先手）のコマンド
 def setTestSentePosition():
   return "position startpos moves"\
     " 2g2f 5a5b 9i9h 8b6b 8g8f 6b8b 2h7h 2c2d 2f2e"\
@@ -15,10 +15,8 @@ def setTestSentePosition():
 
 # テスト局面（いろは後手）をセットする関数
 # 戻り値：
-# テスト局面（いろは後手）をセットする文字列
+# テスト局面（いろは後手）のコマンド
 def setTestGotePosition():
-  # UIがエンジンを起動した時に最初に送るコマンド。
-  # このコマンドを受信したらすぐにidコマンドを返す。
   return "position startpos moves"\
     " 2g2f 5a5b 9i9h 8b6b 8g8f 6b8b 2h7h 2c2d 2f2e 7a6b"\
     " 9g9f 6b5a 9h9g 4a3b 8f8e 6a7b 7h2h 3a4b 6g6f 6c6d"\
@@ -28,6 +26,6 @@ def setTestGotePosition():
   
 # テスト局面の対局時間を設定して試行を開始させる関数
 # 戻り値：
-# 先手、後手の設定時間をセットして思考を開始させる文字列
+# 先手、後手の設定時間をセットして思考を開始させるコマンド
 def setTestTime():
-  return "go btime 3599000 wtime 3597000 byoyomi 0"
+  return "go btime 60000 wtime 60000 byoyomi 10000"
