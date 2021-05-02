@@ -50,9 +50,9 @@ def make_moves(lst_):
 
   """
   if len(lst_) == 2:
-    moves = 1  # 手数
+    moves = 0  # 手数
   else:
-    moves = len(lst_) - 2
+    moves = len(lst_) - 3
   
   return moves
 
